@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 
 from app.database import Base, engine
-from app.routes import users
+from app.routes import auth, users
 
 Base.metadata.create_all(bind=engine)
 
@@ -11,6 +11,7 @@ app = FastAPI(
     version="1.0.0"
 )
 
+app.include_router(auth.router)
 app.include_router(users.router)
 
 

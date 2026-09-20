@@ -446,7 +446,27 @@ Pode visualizar e editar usuários, sem acesso às funções administrativas.
 
 Visualiza apenas os próprios dados.
 
-> Capturas de tela da aplicação podem ser adicionadas posteriormente nesta seção.
+--- 
+### Página inicial
+![alt text](image.png)
+
+### Acesso como administrador
+![alt text](image-1.png)
+
+### Cadastro de novo usuário
+![alt text](image-2.png)
+
+### Acesso de operador
+![alt text](image-3.png)
+
+### Acesso de cliente
+![alt text](image-4.png)
+
+### Swagger / API REST
+![alt text](image-5.png)
+
+### Tentativa de exclusão de um cadsatro com o usuário operador
+![alt text](image-7.png)
 
 ---
 

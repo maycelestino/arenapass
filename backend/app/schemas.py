@@ -10,6 +10,12 @@ class UserCreate(BaseModel):
     perfil: Literal["administrador", "operador", "cliente"]
 
 
+class UserUpdate(BaseModel):
+    nome: str
+    email: EmailStr
+    perfil: Literal["administrador", "operador", "cliente"]
+
+
 class UserResponse(BaseModel):
     id: int
     nome: str

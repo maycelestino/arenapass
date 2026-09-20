@@ -465,7 +465,7 @@ Visualiza apenas os próprios dados.
 ### Swagger / API REST
 ![alt text](image-5.png)
 
-### Tentativa de exclusão de um cadsatro com o usuário operador
+### Tentativa de exclusão de um cadastro com o usuário operador
 ![alt text](image-7.png)
 
 ---

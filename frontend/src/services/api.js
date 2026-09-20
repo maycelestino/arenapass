@@ -1,5 +1,9 @@
 const API_URL = "http://127.0.0.1:8000";
 
+function getToken() {
+    return localStorage.getItem("token");
+}
+
 export async function login(email, senha) {
     const response = await fetch(`${API_URL}/auth/login`, {
         method: "POST",
@@ -19,11 +23,9 @@ export async function login(email, senha) {
 }
 
 export async function getCurrentUser() {
-    const token = localStorage.getItem("token");
-
     const response = await fetch(`${API_URL}/auth/me`, {
         headers: {
-            Authorization: `Bearer ${token}`
+            Authorization: `Bearer ${getToken()}`
         }
     });
 
@@ -37,11 +39,9 @@ export async function getCurrentUser() {
 }
 
 export async function getUsers() {
-    const token = localStorage.getItem("token");
-
     const response = await fetch(`${API_URL}/users`, {
         headers: {
-            Authorization: `Bearer ${token}`
+            Authorization: `Bearer ${getToken()}`
         }
     });
 
@@ -52,4 +52,56 @@ export async function getUsers() {
     }
 
     return data;
+}
+
+export async function createUser(usuario) {
+    const response = await fetch(`${API_URL}/users`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${getToken()}`
+        },
+        body: JSON.stringify(usuario)
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+        throw new Error(data.detail || "Erro ao cadastrar usuário");
+    }
+
+    return data;
+}
+
+export async function updateUser(id, usuario) {
+    const response = await fetch(`${API_URL}/users/${id}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${getToken()}`
+        },
+        body: JSON.stringify(usuario)
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+        throw new Error(data.detail || "Erro ao atualizar usuário");
+    }
+
+    return data;
+}
+
+export async function deleteUser(id) {
+    const response = await fetch(`${API_URL}/users/${id}`, {
+        method: "DELETE",
+        headers: {
+            Authorization: `Bearer ${getToken()}`
+        }
+    });
+
+    if (!response.ok) {
+        const data = await response.json();
+        throw new Error(data.detail || "Erro ao excluir usuário");
+    }
 }

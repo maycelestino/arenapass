@@ -113,3 +113,156 @@ body {
         padding: 30px;
     }
 }
+
+.dashboard {
+    min-height: 100vh;
+    display: flex;
+    background: #f4f6f8;
+}
+
+.sidebar {
+    width: 230px;
+    background: #172554;
+    color: white;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar h2 {
+    margin: 0 0 40px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar nav span {
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.sidebar nav span:hover {
+    background: #1e3a8a;
+}
+
+.logout {
+    margin-top: auto;
+    padding: 10px;
+    border: 1px solid #93c5fd;
+    border-radius: 6px;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+.content {
+    flex: 1;
+    padding: 40px;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.dashboard-header h1 {
+    margin-bottom: 5px;
+}
+
+.dashboard-header p {
+    color: #6b7280;
+    margin: 0;
+}
+
+.perfil,
+.role {
+    background: #dbeafe;
+    color: #1e40af;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    text-transform: capitalize;
+}
+
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-title h2 {
+    margin-bottom: 5px;
+}
+
+.section-title p {
+    margin: 0;
+    color: #6b7280;
+}
+
+.new-user {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 11px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.table-container {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 15px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+    background: #f9fafb;
+}
+
+.edit,
+.delete {
+    border: none;
+    padding: 7px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.edit {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.delete {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.profile-card {
+    max-width: 500px;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.loading {
+    padding: 30px;
+}
